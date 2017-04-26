@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Forum</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script>
+			$(document).ready(function(){
+				var head = 1;
+				var replyBtnId = 0;
+				$("#comment").click(function(){
+					var $newDiv = $("<div style='margin-left:25px;'><p>"+$("#textComment").val()+"</p>"+"<button id=reply>Reply</button>"+"</div>");
+				  $newDiv.attr("id", "HeadComment" + head++);
+				  $("#list").append($newDiv);
+				})
+				$("#"+ replyBtnId).click(function(){
+					replyBtnId++;
+					//$("#head").prepend("<button id=reply>Reply</button>");
+					var $newDiv = $("<div style='margin-left:25px;'><p>"+$("#textComment").val()+"</p>"+"<button id="+replyBtnId+">Reply</button>"+"</div>");
+					$(this).parent().append($newDiv);
+
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<h1 class="head">VIDEO GAME PROGRAMMING CLUB</h1>
+		<h3 class="head">Northeastern Illinois University</h3>
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="home.html">VIDEO GAME PROGRAMMING CLUB</a>
+		    </div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+			    <ul class="nav navbar-nav">
+			      <li><a href="home.html">HOME</a></li>
+			      <li><a href="about.html">ABOUT US</a></li>
+			      <li><a href="news.html">NEWS</a></li>
+						<li class="active"><a href="forum.html">FORUM</a></li>
+			      <li><a href="signup.html">SIGN UP</a></li>
+			    </ul>
+				</div>
+		  </div>
+		</nav>
+		<div style="margin-left:25px;">
+			<h2>Questions</h2>
+			<br><textarea rows="2" cols="50" id="textComment"></textarea>
+			<br><button id="comment">Submit Question</button>
+			<button data-toggle="collapse" data-target="#demo">Collapsible</button>
+			<div id="demo" class="collapse in">
+				<div id="list">
+					<div style="margin-left:25px;"><p>A comment.</p><button id=0>Reply</button></div>
+				</div>
+			</div>
+		</div>
+		<footer class="container-fluid text-center">
+			<h5>Official Github</h5>
+			<a target="_blank" href="https://github.com/NEIUVGPC">https://github.com/NEIUVGPC
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sign Up</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<h1 class="head">VIDEO GAME PROGRAMMING CLUB</h1>
+		<h3 class="head">Northeastern Illinois University</h3>
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="home.html">VIDEO GAME PROGRAMMING CLUB</a>
+		    </div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+			    <ul class="nav navbar-nav">
+			      <li><a href="home.html">HOME</a></li>
+			      <li><a href="about.html">ABOUT US</a></li>
+			      <li><a href="news.html">NEWS</a></li>
+						<li><a href="forum.html">FORUM</a></li>
+			      <li class="active"><a href="signup.html">SIGN UP</a></li>
+			    </ul>
+				</div>
+		  </div>
+		</nav>
+
+		<div class="container">
+		  <h3 class="text-center">SIGN UP FORM</h3>
+		  <div class="row test">
+		    <div class="col-md-12">
+		      <div class="row">
+		        <div class="col-sm-6 form-group">
+		          <input class="form-control" id="firstname" name="name" placeholder="First Name" type="text" required>
+		        </div>
+		        <div class="col-sm-6 form-group">
+		          <input class="form-control" id="lastname" name="email" placeholder="Last Name" type="text" required>
+		        </div>
+		      </div>
+		      <div class="row">
+						<div class="col-sm-4 form-group">
+							<input class="form-control" id="studentID" name="id" placeholder="Student ID" type="text" required>
+						</div>
+						<div class="col-sm-4 form-group">
+							<input class="form-control" id="major" name="major" placeholder="Enter your major" type="text" required>
+						</div>
+						<div class="col-sm-4 form-group">
+						  <select class="selectpicker" title="Select your year">
+						    <option>1</option>
+						    <option>2</option>
+						    <option>3</option>
+						    <option>4</option>
+						  </select>
+						</div>
+					</div>
+		      <div class="row">
+		        <div class="col-md-12 form-group">
+							<br><button type="submit" class="btn pull-right btn-info btn-lg" data-toggle="modal" data-target="#myModal">Send</button>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<form method="POST">
+			<fieldset>
+				<legend>Sign Up Form</legend>
+				First Name:
+				<input type="text" name="firstName"><br>
+				Last Name:
+				<input type="text" name="lastName"><br>
+				Year:
+				<select name="year">
+					<option value=1>Freshman</option>
+					<option value=2>Sophomore</option>
+					<option value=3>Junior</option>
+					<option value=4>Senior</option>
+				</select><br>
+				Major:
+				<input type="text" name="major"></br>
+				<input type="submit" label="fds">
+			</fieldset>
+		</form>
+		<footer class="container-fluid text-center">
+			<h5>Official Github</h5>
+			<a target="_blank" href="https://github.com/NEIUVGPC">https://github.com/NEIUVGPC
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,77 @@
+body{
+  /*background-color: #809fff;*/
+  /*background-color: #d9d9d9;*/
+  background-color:white;
+  font-family: Arial;
+}
+.head{
+  background-color: white;
+  text-align: center;
+  margin: auto;
+  border-radius: 0;
+}
+.navbar {
+  border:0;
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: gray;
+
+}
+/*
+.row.content{
+  height: 450px;
+  width: auto;
+}
+*/
+.sidenav {
+  padding: 20px;
+  height: auto;
+  width: auto;
+
+}
+
+td{
+  padding: 5px;
+}
+footer {
+  background-color: gray;
+  color: white;
+  padding: 15px;
+  margin-bottom: 0px;
+  margin-top: 15px;
+}
+@media screen and (max-width: 700px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {
+    /*height:auto;*/
+  }
+}
+form{
+  align-content: center;
+  margin: 20px;
+  background-color: #ffff66;
+  padding: 10px;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    /*color: white !important;*/
+    background-color: black !important;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: white !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    /*color: red !important;*/
+}
+.icon-bar{
+  color: yellow;
+}
+.btn{
+  background-color: white;
+}
+.btn:hover{
+  background-color: gray;
+}
