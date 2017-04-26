@@ -49,11 +49,13 @@ footer {
     /*height:auto;*/
   }
 }
+/*
 form{
   align-content: center;
   margin: 20px;
   background-color: #ffff66;
   padding: 10px;
+  */
 }
 .navbar-nav li a:hover, .navbar-nav li.active a {
     /*color: white !important;*/
@@ -70,8 +72,15 @@ form{
   color: yellow;
 }
 .btn{
-  background-color: white;
+  color: #fff;
+  background-color: gray;
 }
 .btn:hover{
-  background-color: gray;
+  color: #fff;
+  background-color: black;
+}
+.contactForm{
+  border-style: solid;
+  border-width:1px;
+  padding: 10px 25px 25px 25px;
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
     <title>Video Game Programming Club</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -34,23 +35,6 @@
 		</nav>
 		<div class="container-fluid text-center">
 		  <div class="row content">
-				<div class="col-xs-8 col-sm-10 text-left main">
-					<div class="description">
-			      <h3>Description</h3>
-			      <p>
-			        We are a group of students who are passionate about video games and programming and who want to add our own fresh new ideas into the world.
-			      </p>
-						<p>
-			        We meet every Wednesday at 4:00pm in the Fine Arts building in room 107.
-			      </p>
-					</div>
-					<div class="signUpInfo">
-			      <h3>Signing up</h3>
-			      <p>
-			        If you're interested in signing up, you can either click on the "Sign Up" link in the navigation bar and complete the form, or you can visit our club during one of our scheduled meeting times.
-			      </p>
-			    </div>
-				</div>
 				<div class="col-xs-4 col-sm-2 text-center sidenav">
 					<table class="memberRoster">
 						<th>President</th>
@@ -61,9 +45,29 @@
 						<tr><td>3</td></tr>
 					</table>
 		    </div>
+				<div class="col-xs-8 col-sm-10 text-left main">
+					<div class="description">
+			      <h3>Description</h3>
+			      <p>
+			        We are a group of students who are passionate about video games and programming and who want to add our own fresh new ideas into the world.
+			      </p>
+					</div>
+					<div class="meetings">
+						<h3>Meetings</h3>
+							<p>We meet once a week, 4:00pm on Wednesdays in room 107 of the Fine Arts Building. We usually discuss and plan any ongoing projects. This includes assigning current members specific tasks for the project. </p>
+							<p>Be sure to be included in the email newsletter to stay up to date on upcoming events or incase a meeting is cancelled or altered</p>
+							<p>If for whatever reason you aren't receiving our emails or just wish to not sign up, all current information will be included in the News page</p>
+					</div>
+					<div class="signUpInfo">
+			      <h3>Signing up</h3>
+			      <p>
+			        If you're interested in signing up, you can either click on the "Sign Up" link in the navigation bar and complete the form, or you can visit our club during one of our scheduled meeting times.
+			      </p>
+			    </div>
+				</div>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container contactForm">
 		  <h3 class="text-center">Contact</h3>
 		  <div class="row test">
 		    <div class="col-md-12">
@@ -75,10 +79,14 @@
 		          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
 		        </div>
 		      </div>
-		      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="3"></textarea>
+					<div class="row">
+						<div class="col-sm-12 form-group">
+							<textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="3"></textarea>
+						</div>
+					</div>
 		      <div class="row">
 		        <div class="col-md-12 form-group">
-							<br><button type="submit" class="btn pull-right btn-info btn-lg" data-toggle="modal" data-target="#myModal">Send</button>
+							<br><button type="submit" class="btn btn-default pull-right btn-lg" data-toggle="modal" data-target="#myModal">Send</button>
 		        </div>
 		      </div>
 		    </div>
@@ -92,7 +100,6 @@
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 		      </div>
 		    </div>
-
 		  </div>
 		</div>
 		<footer class="container-fluid text-center">
