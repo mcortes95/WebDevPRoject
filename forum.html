@@ -16,7 +16,7 @@
 				$("#comment").click(function(){
 					//replyBtnId++;
 					window.console&&console.log(replyBtnId);
-					var $newDiv = $("<div style='margin-bottom:5px; margin-top:5px; border-style: solid; border-width:1px;'><p>"+$("#textComment").val()+"</p>"+"<button class='reply'>Reply</button>"+replyBtnId+"</div>");
+					var $newDiv = $("<div style='padding:5px; margin-bottom:5px; margin-top:5px; border-style: solid; border-width:1px;'><p>"+$("#textComment").val()+"</p>"+"<button class='reply'>Reply</button>"+replyBtnId+"</div>");
 				  //$newDiv.attr("id", "HeadComment" + head++);
 				  $("#list").prepend($newDiv);
 					replyBtnId++;
@@ -24,7 +24,7 @@
 				$(".reply").click(function(){
 					//replyBtnId++;
 					window.console&&console.log(replyBtnId);
-					var $newDiv = $("<div style='margin:5px 5px 5px 25px; border-style: solid; border-width:1px;'><p>"+$("#textComment").val()+"</p>"+"<button class='reply'>Reply</button>"+replyBtnId+"</div>");
+					var $newDiv = $("<div style='padding:5px; margin:5px 5px 5px 25px; border-style: solid; border-width:1px;'><p>"+$("#textComment").val()+"</p>"+"<button class='reply'>Reply</button>"+replyBtnId+"</div>");
 					$(this).parent().append($newDiv);
 					replyBtnId++;
 				})
@@ -57,14 +57,17 @@
 		</nav>
 		<div style="margin:25px;">
 			<h2>Questions</h2>
-			<br><textarea rows="2" cols="50" id="textComment"></textarea>
-			<br><button id="comment">Submit Question</button>
-			<button data-toggle="collapse" data-target="#demo">Collapsible</button>
+			<h4>Ask some questions or just have some discussions</h4>
+			<div class="textBoxItems">
+				<br><textarea rows="2" cols="50" id="textComment"></textarea>
+				<br><button id="comment">Submit Question</button>
+				<button data-toggle="collapse" data-target="#demo">Collapsible</button>
+			</div>
 			<div id="demo" class="collapse in">
 				<div id="list">
-					<div style="border-style: solid; border-width:1px; margin-bottom:5px; margin-top:5px;"><p>A comment.</p><button class='reply' >Reply</button></div>
-					<div style="border-style: solid; border-width:1px; margin-bottom:5px; margin-top:5px;"><p>A second comment.</p><button class='reply' >Reply</button></div>
-					<div style="border-style: solid; border-width:1px; margin-bottom:5px; margin-top:5px;"><p>A third comment.</p><button class='reply' >Reply</button></div>
+					<div style="padding:5px; border-style: solid; border-width:1px; margin-bottom:5px; margin-top:5px;"><p>A comment.</p><button class='reply' >Reply</button></div>
+					<div style="padding:5px; border-style: solid; border-width:1px; margin-bottom:5px; margin-top:5px;"><p>A second comment.</p><button class='reply' >Reply</button></div>
+					<div style="padding:5px; border-style: solid; border-width:1px; margin-bottom:5px; margin-top:5px;"><p>A third comment.</p><button class='reply' >Reply</button></div>
 				</div>
 			</div>
 		</div>
