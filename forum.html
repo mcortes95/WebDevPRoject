@@ -11,29 +11,42 @@
 		<script>
 			var replyBtnId = 0;
 			$(document).ready(function(){
-				//var head = 1;
-
 				$("#comment").click(function(){
-					//replyBtnId++;
-					window.console&&console.log(replyBtnId);
-					var $newDiv = $("<div style='padding:5px; margin-bottom:5px; margin-top:5px; border-style: solid; border-width:1px;'><p>"+$("#textComment").val()+"</p>"+"<button class='reply'>Reply</button>"+replyBtnId+"</div>");
-				  //$newDiv.attr("id", "HeadComment" + head++);
-				  $("#list").prepend($newDiv);
-					replyBtnId++;
+					var textBox=$("#textComment").val();
+					if (textBox==""){
+						window.console&&console.log("EMPTY");
+						$('#empty').modal('toggle');
+					}
+					else{
+						window.console&&console.log(replyBtnId);
+						var $newDiv = $("<div class='row'><div class='col-md-12 form-group'><div class='cells'><p>"+$("#textComment").val()+"<button class='btn btn-default pull-right btn-sm reply'>Reply</button></p></div></div></div>");
+					  $("#demo").prepend($newDiv);
+						replyBtnId++;
+					}
 				})
-				$(".reply").click(function(){
-					//replyBtnId++;
-					window.console&&console.log(replyBtnId);
-					var $newDiv = $("<div style='padding:5px; margin:5px 5px 5px 25px; border-style: solid; border-width:1px;'><p>"+$("#textComment").val()+"</p>"+"<button class='reply'>Reply</button>"+replyBtnId+"</div>");
-					$(this).parent().append($newDiv);
-					replyBtnId++;
+				$('.reply').click(function(){
+					var textBox=$("#textComment").val();
+					if (textBox==""){
+						window.console&&console.log("EMPTY");
+						$('#empty').modal('toggle');
+					}
+					else{
+						window.console&&console.log(replyBtnId);
+						var $newDiv = $("<div class='row'><div class='col-md-12 form-group'><div class='cells'><p>"+$("#textComment").val()+"<button class='btn btn-default pull-right btn-sm reply'>Reply</button></p></div></div></div>");
+						$(this).parent().append($newDiv);
+						replyBtnId++;
+					}
 				})
 			});
 		</script>
 	</head>
 	<body>
-		<h1 class="head">VIDEO GAME PROGRAMMING CLUB</h1>
-		<h3 class="head">Northeastern Illinois University</h3>
+		<div class="jumbotron">
+		  <div class="container text-center">
+		    <h1>VIDEO GAME PROGRAMMING CLUB</h1>
+		    <p>Northeastern Illinois University</p>
+		  </div>
+		</div>
 		<nav class="navbar navbar-inverse">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
@@ -55,21 +68,39 @@
 				</div>
 		  </div>
 		</nav>
-		<div style="margin:25px;">
-			<h2>Questions</h2>
-			<h4>Ask some questions or just have some discussions</h4>
-			<div class="textBoxItems">
-				<br><textarea rows="2" cols="50" id="textComment"></textarea>
-				<br><button id="comment">Submit Question</button>
-				<button data-toggle="collapse" data-target="#demo">Collapsible</button>
-			</div>
-			<div id="demo" class="collapse in">
-				<div id="list">
-					<div style="padding:5px; border-style: solid; border-width:1px; margin-bottom:5px; margin-top:5px;"><p>A comment.</p><button class='reply' >Reply</button></div>
-					<div style="padding:5px; border-style: solid; border-width:1px; margin-bottom:5px; margin-top:5px;"><p>A second comment.</p><button class='reply' >Reply</button></div>
-					<div style="padding:5px; border-style: solid; border-width:1px; margin-bottom:5px; margin-top:5px;"><p>A third comment.</p><button class='reply' >Reply</button></div>
-				</div>
-			</div>
+		<div class="container-fluid main">
+			<h2>Forum</h2>
+			<h4>Have a question? Ask it here!</h4>
+		  <div class="row test">
+		    <div class="col-md-12">
+					<div class="row">
+						<div class="col-sm-4 form-group">
+							<textarea class="form-control" id="textComment" name="comments" placeholder="Comment" rows="3"></textarea>
+						</div>
+					</div>
+		      <div class="row">
+		        <div class="col-md-4 form-group">
+							<button  id="comment" type="submit" class="btn btn-default pull-left btn-md">Send</button>
+							<button class="btn btn-default pull-right btn-md" data-toggle="collapse" data-target="#demo">Collapse</button>
+		        </div>
+		      </div>
+					<div id="demo" class="collapse in">
+						<div class="row"><div class="col-md-12 form-group"><div class="cells"><p>A comment.<button class="btn btn-default pull-right btn-sm reply">Reply</button></p></div></div></div>
+
+						<div class="row"><div class="col-md-12 form-group"><div class="cells"><p>A comment.<button class="btn btn-default pull-right btn-sm reply">Reply</button></p></div></div></div>
+
+					</div>
+		    </div>
+		  </div>
+		</div>
+		<div id="empty" class="modal fade" role="dialog">
+		  <div class="modal-dialog modal-sm">
+		    <div class="modal-content">
+		      <div class="modal-body">
+		        <p>Text box cannot be left empty!<button type="button" class="btn btn-default pull-right" data-dismiss="modal">X</button></p>
+		      </div>
+		    </div>
+		  </div>
 		</div>
 		<footer class="container-fluid text-center">
 			<h5>Official Github</h5>
