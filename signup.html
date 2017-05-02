@@ -8,6 +8,26 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<script>
+			$(document).ready(function(){
+				$("#send").click(function(){
+					var fname=$("#firstname").val();
+					var lname=$("#lastname").val();
+					var id=$("#studentID").val();
+					var major=$("#major").val();
+					var commentBox=$("#comments").val();
+					if (fname=="" || lname=="" || id=="" || major==""){
+						window.console&&console.log("EMPTY");
+						$("#empty").modal('toggle');
+					}
+					else{
+						$("#sent").modal('toggle');
+					}
+				})
+			});
+		</script>
+
 	</head>
 	<body>
 		<div class="jumbotron">
@@ -58,24 +78,41 @@
 							<input class="form-control" id="major" name="major" placeholder="Enter your major" type="text" required>
 						</div>
 						<div class="col-sm-4 form-group">
-						  <select class="selectpicker" title="Select your year">
-						    <option>1</option>
-						    <option>2</option>
-						    <option>3</option>
-						    <option>4</option>
+						  <select class="form-control " title="Select your year" id="year">
+						    <option>Freshman</option>
+						    <option>Sophomore</option>
+						    <option>Junior</option>
+						    <option>Senior</option>
 						  </select>
 						</div>
 					</div>
 		      <div class="row">
 		        <div class="col-md-12 form-group">
-							<br><button type="submit" class="btn pull-right btn-lg" data-toggle="modal" data-target="#myModal">Send</button>
+							<button  id="send" class="btn btn-default pull-right btn-lg">Send</button>
 		        </div>
 		      </div>
 		    </div>
 		  </div>
 		</div>
-		
 
+		<div id="sent" class="modal fade" role="dialog">
+		  <div class="modal-dialog modal-sm">
+		    <div class="modal-content">
+		      <div class="modal-body">
+		        <p>Form sent!<button type="button" class="btn btn-default pull-right" data-dismiss="modal">Close</button></p>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<div id="empty" class="modal fade" role="dialog">
+		  <div class="modal-dialog modal-md">
+		    <div class="modal-content">
+		      <div class="modal-body">
+		        <p>Must not leave any text boxes empty!<button type="button" class="btn btn-default pull-right" data-dismiss="modal">Close</button></p>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 		<footer class="container-fluid text-center">
 			<h5>Official Github</h5>
 			<a target="_blank" href="https://github.com/NEIUVGPC">https://github.com/NEIUVGPC
