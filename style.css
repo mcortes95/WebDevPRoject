@@ -16,16 +16,15 @@ p{
   border: 1px solid #e3e3e3;
   padding: 20px;
 
-
 }
 .sidenav {
   border-radius: 4px;
   margin: 25px 25px 25px 25px;
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
-  padding: 20px;
+  padding: 10px;
   width: auto;
-  height:inherit;
+
 }
 .head{
   background-color: white;
@@ -40,10 +39,11 @@ p{
   background-color: gray;
 }
 
-
-td{
+td,th,table{
   padding: 5px;
+  text-align: center;
 }
+
 footer {
   background-color: gray;
   color: white;
@@ -51,17 +51,14 @@ footer {
   margin-bottom: 0px;
   margin-top: 15px;
 }
+
 @media screen and (max-width: 700px) {
   .sidenav {
     height: auto;
     padding: 10px;
   }
-  /*
-  .row.content {
-    width:auto;
-  }
-  */
 }
+
 .navbar-nav li a:hover, .navbar-nav li.active a {
     background-color: black !important;
 }
@@ -71,9 +68,11 @@ footer {
 .navbar-default .navbar-toggle {
     border-color: transparent;
 }
+/*
 .icon-bar{
   color: yellow;
 }
+*/
 .btn{
   color: #fff;
   background-color: gray;
